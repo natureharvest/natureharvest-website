@@ -1,0 +1,37 @@
+ @import "tailwindcss";
+
+ 
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.goog-te-banner-frame.skiptranslate,
+iframe.skiptranslate,
+.goog-te-gadget-icon,
+#goog-gt-tt,
+.goog-tooltip {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
