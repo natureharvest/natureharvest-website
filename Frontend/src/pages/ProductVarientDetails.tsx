@@ -311,7 +311,7 @@ const ProductVariantDetails = () => {
           shadow-[0_6px_25px_rgba(0,0,0,0.08)]
         "
             >
-              <div
+              {/* <div
                 className="
             overflow-hidden
             rounded-tr-[45px]
@@ -334,7 +334,38 @@ const ProductVariantDetails = () => {
               lg:h-[420px]
             "
                 />
-              </div>
+              </div> */}
+
+<div className="relative overflow-hidden rounded-tr-[65px] rounded-bl-[45px] rounded-tl-[0px] rounded-br-[0px] bg-gray-100">
+  <img
+    src={variant.image}
+    alt={variant.name}
+    loading="lazy"
+    onError={(e) => {
+      e.currentTarget.style.visibility = "hidden";
+    }}
+    className="
+      h-[330px]
+      w-full
+      object-cover
+      transition-transform
+      duration-500
+      hover:scale-105
+      sm:h-[380px]
+      lg:h-[420px]
+    "
+  />
+
+  {/* Decorative Logo */}
+  <div className="absolute left-1 top-1 z-10 h-24 w-24 sm:h-28 sm:w-28">
+    <img
+      src="https://res.cloudinary.com/drc0gwhz9/image/upload/v1791539681/Group_13_izj3l9.png"
+      alt=""
+      aria-hidden="true"
+      className="h-full w-full object-contain"
+    />
+  </div>
+</div>
             </div>
 
             {/* ================= PRODUCT CONTENT ================= */}

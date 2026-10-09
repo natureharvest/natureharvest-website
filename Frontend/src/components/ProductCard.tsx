@@ -66,45 +66,23 @@ const ProductCard = ({
         to={productUrl}
         onClick={handleClick}
         aria-label={`View ${name}`}
-        className="
-          relative
-          block
-          h-[230px]
-          w-full
-          overflow-hidden
-          rounded-tr-[30px]
-          rounded-bl-[30px]
-          rounded-tl-none
-          rounded-br-none
-          bg-gray-100
-        "
+        className="block"
       >
-        <img
-          src={image}
-          alt={name}
-          loading="lazy"
-          className="
-            h-full
-            w-full
-            object-cover
-            transition-transform
-            duration-500
-            ease-out
-            group-hover:scale-[1.04]
-          "
-        />
+        <div className="overflow-hidden rounded-tr-[45px] rounded-bl-[45px] bg-gray-100 relative h-[230px] w-full">
+          <img
+            src={image}
+            alt={name}
+            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          />
 
-        {/* Image Hover Overlay */}
-        <div
-          className="
-            absolute
-            inset-0
-            bg-[#075b5b]/0
-            transition-colors
-            duration-300
-            group-hover:bg-[#075b5b]/10
-          "
-        />
+          <img
+            src="https://res.cloudinary.com/drc0gwhz9/image/upload/v1791539681/Group_13_izj3l9.png"
+            alt=""
+            aria-hidden="true"
+            className="absolute left-1 top-1 h-20 w-20 object-contain"
+          />
+        </div>
       </Link>
 
       {/* Product Content */}

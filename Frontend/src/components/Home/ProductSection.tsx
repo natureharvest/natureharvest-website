@@ -1,4 +1,4 @@
- import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import SectionTitle from "../SectionTitle";
 import Button from "../Button";
@@ -96,10 +96,9 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
         ${product.gridClass}
         ${isLeft ? "flex-row" : "flex-row-reverse"}
         ${isDark ? "bg-[#075b5b] text-white" : "bg-[#f6ad00] text-black"}
-        ${
-          isLeft
-            ? "rounded-bl-[50px] rounded-tr-[50px] sm:rounded-bl-[80px] sm:rounded-tr-[80px]"
-            : "rounded-br-[50px] rounded-tl-[50px] sm:rounded-br-[80px] sm:rounded-tl-[80px]"
+        ${isLeft
+          ? "rounded-bl-[50px] rounded-tr-[50px] sm:rounded-bl-[80px] sm:rounded-tr-[80px]"
+          : "rounded-br-[50px] rounded-tl-[50px] sm:rounded-br-[80px] sm:rounded-tl-[80px]"
         }
       `}
     >
@@ -130,12 +129,13 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
       </div>
 
       {/* Product Image */}
+
       <div
         className={`
-          h-[150px] w-[105px] shrink-0 overflow-hidden
-          sm:h-[190px] sm:w-[145px]
-          ${isLeft ? "mr-3 sm:mr-6" : "ml-3 sm:ml-6"}
-        `}
+    relative h-[150px] w-[105px] shrink-0 overflow-hidden
+    sm:h-[190px] sm:w-[145px]
+    ${isLeft ? "mr-3 sm:mr-6" : "ml-3 sm:ml-6"}
+  `}
       >
         <img
           src={product.image}
@@ -143,7 +143,14 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
           loading="lazy"
           className="h-full w-full object-contain transition-transform duration-500 sm:object-cover"
         />
+
+        <img
+          src="https://res.cloudinary.com/drc0gwhz9/image/upload/a_90/v1791539681/Group_13_izj3l9.png"
+          alt=""
+          className="absolute right-0 top-0 h-20 w-20 object-contain"
+        />
       </div>
+
     </motion.div>
   );
 };
