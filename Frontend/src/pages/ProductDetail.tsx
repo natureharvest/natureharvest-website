@@ -134,18 +134,14 @@ const ProductDetails = () => {
           const catId = String(v.categoryId || "").trim().toLowerCase();
           const targetMongoId = String(foundProd?._id || "").trim().toLowerCase();
           const targetId = String(foundProd?.id || "").trim().toLowerCase();
-          const targetNum = String(foundProd?.number || "").trim().toLowerCase();
-          const targetName = String(foundProd?.name || "").trim().toLowerCase();
-          const targetCat = String(foundProd?.category || "").trim().toLowerCase();
+          const targetNumber = String(foundProd?.number || "").trim().toLowerCase();
           const searchParam = String(productId || "").trim().toLowerCase();
 
           return (
-            catId === targetMongoId ||
-            catId === targetId ||
-            catId === targetNum ||
-            catId === targetName ||
-            catId === targetCat ||
-            catId === searchParam
+            (targetMongoId && catId === targetMongoId) ||
+            (targetId && catId === targetId) ||
+            (targetNumber && catId === targetNumber) ||
+            (searchParam && catId === searchParam)
           );
         });
 

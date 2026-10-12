@@ -15,6 +15,7 @@ type TabType = "description" | "features" | "quality";
 interface ProductItem {
   id: string;
   _id?: string;
+  number?: string;
   name: string;
   category?: string;
   description: string;
@@ -113,6 +114,7 @@ const ProductVariantDetails = () => {
         currentProd = {
           id: matchedBackendProd._id || matchedBackendProd.id,
           _id: matchedBackendProd._id,
+          number: matchedBackendProd.number,
           name: matchedBackendProd.name,
           category: matchedBackendProd.category,
           description: matchedBackendProd.description,
@@ -181,7 +183,7 @@ const ProductVariantDetails = () => {
             const catId = String(v.categoryId || "").trim().toLowerCase();
             const targetMongoId = String(currentProd?._id || "").trim().toLowerCase();
             const targetId = String(currentProd?.id || "").trim().toLowerCase();
-            const targetNum = String(currentProd?.name || "").trim().toLowerCase();
+            const targetNum = String(currentProd?.number || "").trim().toLowerCase();
             const searchParam = String(id || "").trim().toLowerCase();
             const isSameCat =
               catId === targetMongoId ||
