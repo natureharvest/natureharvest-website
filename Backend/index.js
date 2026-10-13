@@ -24,7 +24,7 @@ connectCloudinary();
 // Middlewares
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://natureharvest-phi.vercel.app","https://natureharvest.co.in"],
+    origin: ["http://localhost:5173", "https://natureharvest-website.vercel.app","https://natureharvest.co.in"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
