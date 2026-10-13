@@ -1,6 +1,7 @@
  import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { BACKEND_URL } from "../utils/api";
 
 const AdminLogin = () => {
   const navigate = useNavigate();
@@ -9,8 +10,6 @@ const AdminLogin = () => {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
-
-  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
 
 // Login page
 
