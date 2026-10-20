@@ -279,7 +279,7 @@ const Products = () => {
                   />
 
                   {/* Decorative Icon */}
-                  <div className="absolute left-1 top-1 flex h-20 w-20 items-center justify-center">
+                  <div className="absolute left-0 top-0 flex h-20 w-20 items-center justify-center">
                     <img
                       src={DECORATIVE_IMAGE}
                       alt=""
